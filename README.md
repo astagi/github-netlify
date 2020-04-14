@@ -1,5 +1,7 @@
 # github-netlify
 
+Github personal repositories example with Vue and Netlify
+
 ## Project setup
 ```
 yarn install
