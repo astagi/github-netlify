@@ -16,7 +16,7 @@ jest.mock('axios');
   }
 });
 
-describe('App.vue', () => {
+describe('App.vue component', () => {
   let wrapper: any;
   beforeEach(() => {
     wrapper = shallowMount(App);
@@ -25,7 +25,7 @@ describe('App.vue', () => {
     await Vue.nextTick();
     expect(wrapper.findAll('repository-stub').length).toEqual(30);
   });
-  it('fetch other repositories on load more', async () => {
+  it('fetches other repositories on load more', async () => {
     await Vue.nextTick();
     wrapper.vm.fetchRepositories();
     await Vue.nextTick();
