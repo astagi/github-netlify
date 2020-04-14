@@ -1,0 +1,8 @@
+[build]
+  base = "/"
+  publish = "dist"
+  command = "yarn build"
+  functions = "lambda"
+
+[dev]
+  command = "yarn serve"
