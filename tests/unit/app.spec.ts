@@ -9,9 +9,9 @@ jest.mock('axios');
 
 (axios.get as jest.Mock).mockImplementation((url) => {
   switch (url) {
-    case `https://api.github.com/users/${process.env.GITHUB_USER}/repos?page=1`:
+    case `${process.env.VUE_APP_BACKEND_ENDPOINT}/getmyrepos?page=1`:
       return Promise.resolve({data : reposResponses.page1});
-    case `https://api.github.com/users/${process.env.GITHUB_USER}/repos?page=2`:
+    case `${process.env.VUE_APP_BACKEND_ENDPOINT}/getmyrepos?page=2`:
       return Promise.resolve({data : reposResponses.page2});
   }
 });
